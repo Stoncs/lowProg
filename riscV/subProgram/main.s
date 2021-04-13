@@ -14,7 +14,7 @@ main:
   call revers
    
   lw ra, 12(sp)
-  addi sp, sp 16
+  addi sp, sp, 16
   ret
   
 .rodata
