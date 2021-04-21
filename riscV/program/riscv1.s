@@ -1,6 +1,6 @@
 .text
-start:
-.globl start
+__start:
+.globl __start
   lw a3, array_length # а3 = <длина массива>
   la a4, array # a4 = <адрес 0-го элемента массива>
   
