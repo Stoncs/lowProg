@@ -1,0 +1,10 @@
+# Чтобы достичь цели "all", требуется построить библиотеку
+all: lib
+
+lib: reverse.o
+	riscv64-unknown-elf-ar -rsc libReverse.a reverse.o
+	$(RM) -f *.o
+	
+reverse.o: reverse.c
+	riscv64-unknown-elf-gcc -march=rv64iac -mabi=lp64 -c reverse.c -o reverse.o
+	

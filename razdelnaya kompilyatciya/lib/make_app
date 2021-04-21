@@ -1,0 +1,5 @@
+all:
+	make -f make_lib
+	riscv64-unknown-elf-gcc -march=rv64iac -mabi=lp64 main.c libReverse.a -o main
+	$(RM) -f *.o *.a
+
